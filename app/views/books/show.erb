@@ -1,0 +1,10 @@
+<h1>Mon livre</h1>
+<p>Titre : <%=@book.title_was%></p>
+
+<%= render "books/form" %> <!--appeler d'un partial de modification-->
+  
+  
+  <%= form_tag "/books/#{@book.id}", method: "delete" do %>
+  <input type="submit" value="Supprimer le titre" />
+<% end %>
+<p><a href="/books">Retour à la liste</a></p>

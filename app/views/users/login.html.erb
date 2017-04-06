@@ -1,0 +1,7 @@
+<h1>Users#login</h1>
+<p>Find me in app/views/users/login.html.erb</p>
+<%= form_tag "/users/login", method: "post" do %>
+<input type="text" name="name" placeholder="name"> 
+<input type="text" name="password" placeholder="password"/>  <!--grm bcrypt pour cryptage mot de passe-->
+<input type="submit" name="Se connecter"/> 
+<%end%>

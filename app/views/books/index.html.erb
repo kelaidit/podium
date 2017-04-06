@@ -1,0 +1,23 @@
+<h1>Books#index</h1>
+<p>Find me in app/views/books/index.html.erb</p>
+
+<%= paginate @books %>
+
+<%@books.each do |book|%>
+  <p>
+   <%= book_link book %>  <!--#appel à un helper-->
+  </p>
+<%end%>
+  
+
+
+<%= form_tag "/books", method: "post" do %>
+  <input type="text" name="title" placeholder="titre"/>
+  <select name="category_id">
+  <%@categories.each do |category|%>
+  <option value="<%=category.id%>"><%=category.title%> </option>
+  <%end%>
+  </select>
+  <input type="submit" value="Ajouter le livre" />
+  <%= render "books/form" %>
+<% end %>

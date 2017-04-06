@@ -1,0 +1,14 @@
+<h1>Users#home</h1>
+<p>Find me in app/views/users/home.html.erb</p>
+<%if @current_user %>
+  <%if @current_user.role="admin" %>
+<p>Bienvenue administrateur</p>
+  <%else %>
+<p>Bienvenue utilisateur</p>
+  <%end %>
+<%else %>
+<p>Bienvenue inconnu</p>
+<%end %>
+
+<a href=/users/login>Login</a>
+<a href=/users/logout>Logout</a>

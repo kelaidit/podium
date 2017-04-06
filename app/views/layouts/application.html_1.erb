@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Podium</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+      <p>Début de Podium</p>
+      <div> <%= if session[:user_id] then "Utilisateur connecté : " + User.find(session[:user_id])[:name] end %> </div>
+      <div><%= flash[:success]  %></div> <!--#affiche un message flash passé dans la view (show dans ce cas)-->
+      <div><%=  flash[:fail]  %></div> <!--#affiche un message flash passé dans la view (show dans ce cas)-->
+
+      <div><%= flash[:info] %></div>
+      <div><%= session[:test] %></div>
+  <div> <%=  image_tag "animation_bijoux_tatoo_2.jpg", alt: "Mon image", width: 150, height: 100 %> </div>    
+<%= yield %>
+   <p>by Gilles</p>
+      
+  </body>
+</html>

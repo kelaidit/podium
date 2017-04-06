@@ -1,0 +1,37 @@
+# MySQL. Versions 5.0 and up are supported.
+#
+# Install the MySQL driver
+#   gem install mysql2
+#
+# Ensure the MySQL gem is defined in your Gemfile
+#   gem 'mysql2'
+#
+# And be sure to use new-style password hashing:
+#   http://dev.mysql.com/doc/refman/5.7/en/old-client.html
+#
+default: &default
+  adapter: sqlserver
+  #mode : ODBC Driver 13 for SQL SERVER
+  provider : MSDASQL.1
+  dsn : IKOULA GKE 13
+  username: root_podium
+  password: SFieX762y43h8NkF
+  host: 178.170.124.82
+
+
+
+development:
+  <<: *default
+  database: podium_developpement
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: podium_test
+
+production:
+  <<: *default
+  database: podium_production
+

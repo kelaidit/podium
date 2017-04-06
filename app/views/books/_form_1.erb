@@ -1,0 +1,7 @@
+<%= form_tag "/books/#{@un_livre.id}", method: "patch" do %>
+  <input type="text" name="title" />
+  
+  <p><%=  @un_livre.errors[:title].first %></p>
+  
+  <input type="submit" value="Modifier le titre" />
+<% end %>

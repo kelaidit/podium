@@ -1,0 +1,11 @@
+<h1>Bonjour</h1>
+<p>C'est le début de Podium - Années <%=@var%> </p>
+<p><%puts@var%> </p>
+<%if @var == 2%>
+Well done
+<%else%>
+False
+<%end%>
+<%@var.times do |i|%>
+<p>Itération <%=i%></p>
+<%end%>
