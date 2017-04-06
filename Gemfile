@@ -54,6 +54,6 @@ gem 'activerecord-sqlserver-adapter'
 gem 'kaminari' #pagination
 
 # gem 'bootstrap', '~> 4.0.0.alpha3'
-gem ''therubyracer#pour avoir un javscript runtime
+gem 'therubyracer'#pour avoir un javscript runtime
 gem 'less-rails' #Rails uses SASS instead of LESS. You will have to install the less-rails gem to have LESS support.
 gem 'twitter-bootstrap-rails'
